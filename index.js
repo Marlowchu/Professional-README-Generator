@@ -4,41 +4,45 @@ const fs = require('fs');
 const generateMarkdown = require(`./utils/generateMarkdown`)
 // TODO: Create an array of questions for user input
 const questions = [
-    {
+        {
         type: 'input',
         name: 'title',
         message: 'Project title?',
-      },
-      {
+        },
+        {
           type: 'input',
           name: 'description',
-          message: 'Description of project?',
+          message: 'Description of  the project?',
         },
         {
           type: 'input',
           name: 'installation',
-          message: 'Installation instructions?',
+          message: 'How to install?',
+          default: `npm i`,
         },
         {
           type: 'input',
           name: 'usage',
-          message: 'Usage information?',
+          message: 'Any special usage information?',
+          default: `none`,
         },
-      {
+        {
         type: 'list',
         message: 'Choose license applicable to your project?',
         name: 'license',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0','BSD 3.','NONE'],
-      },
-      {
+        },
+        {
           type: 'input',
           name: 'contribution',
-          message: 'Contribution guidelines?',
+          message: 'Contribution information?',
+          default: `none`,
         },
         {
           type: 'input',
           name: 'test',
-          message: 'Test instructions?',
+          message: 'How to test?',
+          default: `npm test`,
         },
         {
           type: 'input',
@@ -58,7 +62,7 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         } else
-            console.log("Success!");
+            console.log("Generating README...");
     });
 };
 
@@ -69,9 +73,7 @@ function init() {
         const readmeInfo = generateMarkdown(answers);
         writeToFile('./utils/README.md', readmeInfo);
     })
-    .catch(err => {
-        console.log(err);
-    });
+    .catch(err => { console.log(err)});
 }
 
 // Function call to initialize app
