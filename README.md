@@ -1,12 +1,14 @@
-# Test project
+# Professional README Generator
  
  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
+  
   
 
   ## Description
 
-  This project is to show how the readme generator works
+  This project creates README files for the user. The user is asked questions about the project in node.js. Once all the questions are asked the program creates a README file.
+
+  Link to video of program working (https://watch.screencastify.com/v/XGLQHDRuozNr0vSCBYnN)
 
 
   ## Table of Contents
@@ -30,7 +32,7 @@
 
   ## License
 
-  This application is covered under the "MIT" license, see (https://opensource.org/licenses/MIT) for more info.
+  None
   
 
   ## Contributions
@@ -47,5 +49,7 @@
   
   My GitHub username is [Marlowchu](https://github.com/Marlowchu).
 
-  If you have any questions you can reach me at marlowchu@gmail.com.
+
+
+ 
   
