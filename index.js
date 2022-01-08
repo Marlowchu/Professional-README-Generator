@@ -18,31 +18,33 @@ const questions = [
           type: 'input',
           name: 'installation',
           message: 'How to install?',
-          default: `npm i`,
+          // added default value
+          default: 'npm i',
         },
         {
           type: 'input',
           name: 'usage',
           message: 'Any special usage information?',
-          default: `none`,
+          default: 'None',
         },
         {
+          // user can only choose from list items
         type: 'list',
         message: 'Choose license applicable to your project?',
         name: 'license',
-        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0','BSD 3.','NONE'],
+        choices: ['MIT', 'APACHE 2.0', 'MPL 2.0','NONE'],
         },
         {
           type: 'input',
           name: 'contribution',
           message: 'Contribution information?',
-          default: `none`,
+          default: 'None',
         },
         {
           type: 'input',
           name: 'test',
           message: 'How to test?',
-          default: `npm test`,
+          default: 'None',
         },
         {
           type: 'input',
